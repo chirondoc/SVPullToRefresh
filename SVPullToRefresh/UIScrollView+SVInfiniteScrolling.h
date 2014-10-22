@@ -44,4 +44,6 @@ typedef NSUInteger SVInfiniteScrollingState;
 - (void)startAnimating;
 - (void)stopAnimating;
 
+- (id)initWithFrame:(CGRect)frame andStyle:(UIActivityIndicatorViewStyle)style;
+
 @end

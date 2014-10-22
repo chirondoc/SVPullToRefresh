@@ -155,6 +155,21 @@ UIEdgeInsets scrollViewOriginalContentInsets;
     return self;
 }
 
+- (id)initWithFrame:(CGRect)frame andStyle:(UIActivityIndicatorViewStyle)style {
+    if(self = [super initWithFrame:frame]) {
+
+        // default styling values
+        self.activityIndicatorViewStyle = style;
+        self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        self.viewForState = [NSMutableArray arrayWithObjects:@"", @"", @"", @"", nil];
+        self.state = SVInfiniteScrollingStateStopped;
+        [self updateViewForState:SVInfiniteScrollingStateStopped];
+        self.enabled = YES;
+    }
+
+    return self;
+}
+
 - (void)willMoveToSuperview:(UIView *)newSuperview {
     if (self.superview && newSuperview == nil) {
         UIScrollView *scrollView = (UIScrollView *)self.superview;
