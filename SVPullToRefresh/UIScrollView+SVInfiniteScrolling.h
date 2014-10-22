@@ -14,6 +14,7 @@
 @interface UIScrollView (SVInfiniteScrolling)
 
 - (void)addInfiniteScrollingWithActionHandler:(void (^)(void))actionHandler;
+- (void)addInfiniteScrollingWithStyle:(UIActivityIndicatorViewStyle)style andActionHandler:(void (^)(void))actionHandler;
 - (void)triggerInfiniteScrolling;
 
 @property (nonatomic, strong, readonly) SVInfiniteScrollingView *infiniteScrollingView;
